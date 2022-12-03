@@ -4,7 +4,7 @@ use std::time::Instant;
 
 fn read_input_file() -> String {
     let mut data = String::new();
-    let mut f = File::open("C:/wamp/www/advent_of_code_2022/day_1/src/input.txt").expect("Unable to open file");
+    let mut f = File::open("src/input.txt").expect("Unable to open file");
     f.read_to_string(&mut data).expect("Unable to read string");
     return data;
 }
