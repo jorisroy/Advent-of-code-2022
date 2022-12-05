@@ -2,6 +2,7 @@ use std::fs::File;
 use std::io::Read;
 use std::collections::HashMap;
 mod calculators;
+use std::time::Instant;
 
 
 fn read_input_file() -> String {
@@ -46,10 +47,14 @@ fn calculate_points_contest(lines: std::str::Lines) {
 }
 
 fn main() {
+    let now = Instant::now();
 
     let file = read_input_file();
 
     let lines = file.lines();
 
     calculate_points_contest(lines);
+
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.2?}", elapsed);
 }
